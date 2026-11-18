@@ -1,74 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Nombre real de la app -->
-    <string name="app_name">Sabor Local</string>
-
-    <!-- Login -->
-    <string name="cd_logo">Logo de la aplicación</string>
-    <string name="login_hint_correo">Correo electrónico</string>
-    <string name="login_hint_clave">Contraseña</string>
-    <string name="login_recordarme">Recordarme</string>
-    <string name="login_ingresar">Ingresar</string>
-
-    <!-- Registro -->
-    <string name="registro_titulo">Crear Cuenta</string>
-    <string name="registro_subtitulo">Guarda tus reseñas favoritas</string>
-    <string name="registro_hint_nombre">Nombre</string>
-    <string name="registro_hint_correo">Correo</string>
-    <string name="registro_hint_clave">Contraseña</string>
-    <string name="registro_hint_repetir">Repetir contraseña</string>
-    <string name="registro_pregunta">¿Qué comida prefieres?</string>
-    <string name="comida_chilena">Chilena</string>
-    <string name="comida_italiana">Italiana</string>
-    <string name="comida_asiatica">Asiática</string>
-    <string name="comida_otra">Otra</string>
-    <string name="registro_terminos">Acepto los términos y condiciones</string>
-    <string name="registro_crear">Crear cuenta</string>
-    <string name="registro_ir_login">¿Ya tienes cuenta? Ingresa</string>
-
-    <!-- Lista -->
-    <string name="lista_titulo">Mis Reseñas</string>
-    <string name="cd_ia">Recomendaciones con IA</string>
-    <string name="cd_agregar">Agregar reseña</string>
-    <string name="cd_salir">Cerrar sesión</string>
-    <string name="cd_caratula">Foto del restaurante</string>
-    <string name="lista_ver">Ver</string>
-    <string name="ejemplo_nombre_1">La Picada de Ñuñoa</string>
-    <string name="ejemplo_tipo_1">Chilena · Ñuñoa</string>
-    <string name="ejemplo_puntaje_1">4.5 ★</string>
-    <string name="ejemplo_nombre_2">Trattoria Bella</string>
-    <string name="ejemplo_tipo_2">Italiana · Providencia</string>
-    <string name="ejemplo_puntaje_2">4.0 ★</string>
-    <string name="ejemplo_nombre_3">Sushi Norte</string>
-    <string name="ejemplo_tipo_3">Asiática · Recoleta</string>
-    <string name="ejemplo_puntaje_3">3.5 ★</string>
-
-    <!-- Agregar -->
-    <string name="agregar_titulo">Nueva Reseña</string>
-    <string name="cd_volver">Volver</string>
-    <string name="agregar_hint_nombre">Nombre del restaurante</string>
-    <string name="agregar_hint_comuna">Comuna</string>
-    <string name="agregar_hint_comentario">Cuéntanos tu experiencia</string>
-    <string name="agregar_puntaje">Puntaje</string>
-    <string name="agregar_guardar">Guardar reseña</string>
-    <string name="puntaje_1">1</string>
-    <string name="puntaje_2">2</string>
-    <string name="puntaje_3">3</string>
-    <string name="puntaje_4">4</string>
-    <string name="puntaje_5">5</string>
-
-    <!-- Detalle -->
-    <string name="detalle_comentario">Excelente pastel de choclo, atención rápida y porciones generosas.</string>
-    <string name="detalle_visitas">Visitado 3 veces</string>
-    <string name="detalle_favorito">Favorito</string>
-    <string name="detalle_editar">Editar reseña</string>
-    <string name="detalle_eliminar">Eliminar reseña</string>
-
-    <!-- IA -->
-    <string name="ia_titulo">Recomendaciones con IA</string>
-    <string name="ia_pregunta">¿Qué se te antoja hoy?</string>
-    <string name="ia_hint">Ej: algo calentito para un día de lluvia</string>
-    <string name="ia_boton">Recomendar</string>
-    <string name="ia_etiqueta_respuesta">Tus recomendaciones</string>
-    <string name="ia_respuesta_ejemplo">Para un día de lluvia:\n\n1. La Picada de Ñuñoa, pastel de choclo\n2. Trattoria Bella, lasaña casera\n3. Sushi Norte, sopa miso</string>
+    <!-- Modo claro. Nombres por función, no por color -->
+    <color name="primario">#B3382C</color>
+    <color name="texto_sobre_primario">#FFFFFF</color>
+    <color name="fondo_pantalla">#FFFFFF</color>
+    <color name="fondo_tarjeta">#FBEFEA</color>
+    <color name="fondo_respuesta">#F3E5E0</color>
+    <color name="texto_principal">#1C1B1F</color>
+    <color name="texto_secundario">#5F5A5A</color>
+    <color name="enlace">#B3382C</color>
 </resources>
