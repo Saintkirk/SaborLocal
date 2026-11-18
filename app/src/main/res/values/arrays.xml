@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Opciones del Spinner spnTipoComida -->
+    <string-array name="tipos_comida">
+        <item>Chilena</item>
+        <item>Italiana</item>
+        <item>Asiática</item>
+        <item>Mexicana</item>
+        <item>Otra</item>
+    </string-array>
+</resources>
