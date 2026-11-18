@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modo oscuro. Mismos nombres, valores para fondo oscuro -->
+    <color name="primario">#FFB4A8</color>
+    <color name="texto_sobre_primario">#4A0C05</color>
+    <color name="fondo_pantalla">#1C1B1F</color>
+    <color name="fondo_tarjeta">#2B2523</color>
+    <color name="fondo_respuesta">#3A302D</color>
+    <color name="texto_principal">#E6E1E5</color>
+    <color name="texto_secundario">#CAC4C4</color>
+    <color name="enlace">#FFB4A8</color>
+</resources>

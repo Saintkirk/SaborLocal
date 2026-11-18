@@ -1,9 +1,22 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://android.com">
     <!-- Base application theme. -->
     <style name="Base.Theme.SaborLocal" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primario</item>
+        <item name="android:statusBarColor">@color/primario</item>
     </style>
 
     <style name="Theme.SaborLocal" parent="Base.Theme.SaborLocal" />
+
+    <!-- Estilo propio para los botones principales -->
+    <style name="Estilo.Boton.Principal" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/primario</item>
+        <item name="android:textColor">@color/texto_sobre_primario</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo propio para títulos de pantalla -->
+    <style name="Estilo.Titulo" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
