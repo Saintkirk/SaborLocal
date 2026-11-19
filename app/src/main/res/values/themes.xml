@@ -1,7 +1,9 @@
-<resources xmlns:tools="http://android.com">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base de la aplicación en modo claro -->
     <style name="Base.Theme.SaborLocal" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primario</item>
+        <item name="colorOnPrimary">@color/texto_sobre_primario</item>
         <item name="android:statusBarColor">@color/primario</item>
     </style>
 
@@ -9,7 +11,7 @@
 
     <!-- Estilo propio para los botones principales -->
     <style name="Estilo.Boton.Principal" parent="Widget.Material3.Button">
-        <item name="android:backgroundTint">@color/primario</item>
+        <item name="backgroundTint">@color/primario</item>
         <item name="android:textColor">@color/texto_sobre_primario</item>
         <item name="android:textStyle">bold</item>
     </style>
