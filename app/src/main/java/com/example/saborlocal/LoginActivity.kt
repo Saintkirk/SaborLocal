@@ -21,10 +21,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun IngresarOnClick(view: View) {
-        val intent = Intent(this, RegistroActivity::class.java)
-        startActivity(intent)
-    }
 
     fun IrRegistroOnClick(view: View) {
         val intent = Intent(this, RegistroActivity::class.java)
