@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    ConstraintLayout: pantalla de inicio de sesión, con las vistas ancladas entre sí.
+    id: login. background: color de fondo desde colors.xml.
+    tools:context: este layout lo usa LoginActivity (solo vista previa).
+-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +14,7 @@
     android:background="@color/fondo_pantalla"
     tools:context=".LoginActivity">
 
+    <!-- ImageView: logo de la app. id: imgLogo. contentDescription: texto para lectores de pantalla. -->
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="140dp"
@@ -21,6 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- TextView: nombre de la app. id: txtNombreApp. -->
     <TextView
         android:id="@+id/txtNombreApp"
         android:layout_width="wrap_content"
@@ -34,6 +41,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />
 
+    <!--
+        EditText: correo.
+        id: edtCorreo.
+        autofillHints: emailAddress, permite que el teclado sugiera el correo guardado.
+        inputType: textEmailAddress, teclado con arroba.
+    -->
     <EditText
         android:id="@+id/edtCorreo"
         android:layout_width="0dp"
@@ -41,6 +54,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints="emailAddress"
         android:hint="@string/login_hint_correo"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -50,6 +64,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtNombreApp" />
 
+    <!--
+        EditText: contraseña.
+        id: edtClave.
+        autofillHints: password, permite sugerir la contraseña guardada.
+        inputType: textPassword, oculta lo que se escribe.
+    -->
     <EditText
         android:id="@+id/edtClave"
         android:layout_width="0dp"
@@ -57,6 +77,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints="password"
         android:hint="@string/login_hint_clave"
         android:inputType="textPassword"
         android:minHeight="48dp"
@@ -66,16 +87,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtCorreo" />
 
+    <!-- CheckBox: recordar sesión. id: chkRecordarme. minHeight: área táctil de 48dp. -->
     <CheckBox
         android:id="@+id/chkRecordarme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:minHeight="48dp"
         android:text="@string/login_recordarme"
         android:textColor="@color/texto_principal"
         app:layout_constraintStart_toStartOf="@id/edtClave"
         app:layout_constraintTop_toBottomOf="@id/edtClave" />
 
+    <!-- Button: ingresar. id: btnIngresar. Estilo propio Estilo.Boton.Principal. -->
     <Button
         android:id="@+id/btnIngresar"
         style="@style/Estilo.Boton.Principal"
@@ -87,6 +111,12 @@
         app:layout_constraintStart_toStartOf="@id/edtClave"
         app:layout_constraintTop_toBottomOf="@id/chkRecordarme" />
 
+    <!--
+        TextView: enlace al registro.
+        id: txtIrRegistro.
+        onClick: método IrRegistroOnClick en LoginActivity.
+        minHeight: área táctil de 48dp.
+    -->
     <TextView
         android:id="@+id/txtIrRegistro"
         android:layout_width="wrap_content"
@@ -96,7 +126,7 @@
         android:minHeight="48dp"
         android:onClick="IrRegistroOnClick"
         android:text="@string/login_ir_registro"
-        android:textColor="@color/primario"
+        android:textColor="@color/enlace"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

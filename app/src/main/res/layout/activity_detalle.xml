@@ -5,6 +5,7 @@
     tools:context: este layout lo usa DetalleActivity (solo vista previa).
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -22,6 +23,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp">
+
+        <!--
+            ImageButton: volver a la lista. id: btnVolverDetalle.
+            layout_gravity: alineado a la derecha, igual que en Agregar.
+            app:tint: color del ícono desde colors.xml, para que tenga contraste en modo claro y oscuro.
+            Usa el texto cd_volver ya existente en strings.xml.
+        -->
+        <ImageButton
+            android:id="@+id/btnVolverDetalle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            app:tint="@color/texto_principal"
+            android:contentDescription="@string/cd_volver" />
 
         <!--
             ImageView: foto del restaurante.
@@ -53,7 +70,7 @@
             android:textStyle="bold"
             android:textColor="@color/texto_principal" />
 
-        <!-- TextView: tipo de comida y comuna. id: txtTipoDetalle. -->
+        <!-- TextView: tipo de comida y comuna. id: txtTipoDetalle. textColor: texto secundario. -->
         <TextView
             android:id="@+id/txtTipoDetalle"
             android:layout_width="wrap_content"
@@ -100,12 +117,14 @@
             id: swFavoritoDetalle.
             text: lo que se lee al lado del interruptor.
             checked: aparece marcado al abrir la pantalla.
+            minHeight: área táctil de 48dp.
         -->
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/swFavoritoDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:minHeight="48dp"
             android:text="@string/detalle_favorito"
             android:textColor="@color/texto_principal"
             android:checked="true" />
