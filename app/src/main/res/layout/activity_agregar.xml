@@ -5,6 +5,7 @@
     tools:context: este layout lo usa AgregarActivity (solo vista previa).
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -48,6 +49,7 @@
                 android:layout_height="48dp"
                 android:src="@android:drawable/ic_menu_close_clear_cancel"
                 android:background="@android:color/transparent"
+                app:tint="@color/texto_principal"
                 android:contentDescription="@string/cd_volver" />
         </LinearLayout>
 
@@ -61,6 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:autofillHints="name"
             android:hint="@string/agregar_hint_nombre"
             android:textColorHint="@color/texto_secundario"
             android:textColor="@color/texto_principal"
@@ -76,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:minHeight="48dp"
             android:entries="@array/tipos_comida" />
 
         <!-- EditText: comuna. id: edtComuna. -->
@@ -84,6 +89,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:minHeight="48dp"
+            android:autofillHints="addressLocality"
             android:hint="@string/agregar_hint_comuna"
             android:textColorHint="@color/texto_secundario"
             android:textColor="@color/texto_principal"
@@ -117,6 +124,7 @@
                 android:id="@+id/rbPuntaje1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="@string/puntaje_1"
                 android:textColor="@color/texto_principal" />
 
@@ -124,6 +132,7 @@
                 android:id="@+id/rbPuntaje2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="@string/puntaje_2"
                 android:textColor="@color/texto_principal" />
 
@@ -131,6 +140,7 @@
                 android:id="@+id/rbPuntaje3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="@string/puntaje_3"
                 android:textColor="@color/texto_principal" />
 
@@ -138,6 +148,7 @@
                 android:id="@+id/rbPuntaje4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:checked="true"
                 android:text="@string/puntaje_4"
                 android:textColor="@color/texto_principal" />
@@ -146,6 +157,7 @@
                 android:id="@+id/rbPuntaje5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="@string/puntaje_5"
                 android:textColor="@color/texto_principal" />
         </RadioGroup>
@@ -162,6 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:autofillHints=""
             android:gravity="top|start"
             android:hint="@string/agregar_hint_comentario"
             android:textColorHint="@color/texto_secundario"
