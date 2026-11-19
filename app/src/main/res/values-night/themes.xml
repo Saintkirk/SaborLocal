@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Mismo tema en modo oscuro. Los colores cambian solos por values-night/colors.xml -->
-    <style name="Theme.SaborLocal" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Tema base en modo oscuro: misma estructura que values/themes.xml -->
+    <style name="Base.Theme.SaborLocal" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primario</item>
         <item name="colorOnPrimary">@color/texto_sobre_primario</item>
-        <item name="android:windowBackground">@color/fondo_pantalla</item>
-        <item name="android:textColor">@color/texto_principal</item>
+        <item name="android:statusBarColor">@color/fondo_pantalla</item>
     </style>
+
+    <style name="Theme.SaborLocal" parent="Base.Theme.SaborLocal" />
 </resources>

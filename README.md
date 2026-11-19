@@ -1,13 +1,5 @@
 Sabor Local es una aplicación diseñada para descubrir, registrar y gestionar reseñas de restaurantes locales preferidos, integrando además recomendaciones personalizadas mediante IA.
 
-Desarrollador
-Nombre: Leandro Parrao
-
-RUT: 16.639.762-6 (Desarrollo individual)
-
-Docente: Michael Arjel
-
-Sección: 103-4A-F2
 
 Entorno y Tecnologías
 IDE: Android Studio (Versión Otter 2025.2.1)

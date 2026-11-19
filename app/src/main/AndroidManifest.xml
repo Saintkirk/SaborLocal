@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaborLocal">
         <activity
+            android:name=".AgregarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListaActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroActivity"
             android:exported="false" />
         <activity

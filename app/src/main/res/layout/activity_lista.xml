@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_pantalla"
+    tools:context=".ListaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtTituloLista"
+            style="@style/Estilo.Titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lista_titulo" />
+
+        <ImageButton
+            android:id="@+id/btnIA"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/star_big_on"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_ia" />
+
+        <ImageButton
+            android:id="@+id/btnAgregar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_agregar" />
+
+        <ImageButton
+            android:id="@+id/btnSalir"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_salir" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/fondo_tarjeta">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="@string/cd_caratula" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_nombre_1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_principal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_tipo_1"
+                        android:textSize="14sp"
+                        android:textColor="@color/texto_secundario" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_puntaje_1"
+                        android:textSize="14sp"
+                        android:textColor="@color/primario" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnVerRestaurante1"
+                    style="@style/Estilo.Boton.Principal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lista_ver" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/fondo_tarjeta">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="@string/cd_caratula" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_nombre_2"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_principal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_tipo_2"
+                        android:textSize="14sp"
+                        android:textColor="@color/texto_secundario" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_puntaje_2"
+                        android:textSize="14sp"
+                        android:textColor="@color/primario" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnVerRestaurante2"
+                    style="@style/Estilo.Boton.Principal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lista_ver" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/fondo_tarjeta">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="@string/cd_caratula" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_nombre_3"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_principal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_tipo_3"
+                        android:textSize="14sp"
+                        android:textColor="@color/texto_secundario" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ejemplo_puntaje_3"
+                        android:textSize="14sp"
+                        android:textColor="@color/primario" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnVerRestaurante3"
+                    style="@style/Estilo.Boton.Principal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lista_ver" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
