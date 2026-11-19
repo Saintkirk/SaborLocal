@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_pantalla"
+    tools:context=".RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/txtTituloRegistro"
+            style="@style/Estilo.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/registro_titulo" />
+
+        <TextView
+            android:id="@+id/txtSubtituloRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/registro_subtitulo"
+            android:textColor="@color/texto_secundario"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edtNombreRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/registro_hint_nombre"
+            android:inputType="textPersonName|textCapWords"
+            android:minHeight="48dp"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_secundario" />
+
+        <EditText
+            android:id="@+id/edtCorreoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/registro_hint_correo"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_secundario" />
+
+        <EditText
+            android:id="@+id/edtClaveRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/registro_hint_clave"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_secundario" />
+
+        <EditText
+            android:id="@+id/edtRepetirClaveRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/registro_hint_repetir"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="@color/texto_principal"
+            android:textColorHint="@color/texto_secundario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/registro_pregunta"
+            android:textColor="@color/texto_principal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgComida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbChilena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/comida_chilena"
+                android:textColor="@color/texto_principal" />
+
+            <RadioButton
+                android:id="@+id/rbItaliana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/comida_italiana"
+                android:textColor="@color/texto_principal" />
+
+            <RadioButton
+                android:id="@+id/rbAsiatica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/comida_asiatica"
+                android:textColor="@color/texto_principal" />
+
+            <RadioButton
+                android:id="@+id/rbOtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/comida_otra"
+                android:textColor="@color/texto_principal" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/chkTerminosRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/registro_terminos"
+            android:textColor="@color/texto_principal" />
+
+        <Button
+            android:id="@+id/btnCrearCuenta"
+            style="@style/Estilo.Boton.Principal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/registro_crear" />
+
+        <TextView
+            android:id="@+id/txtIrAlLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:text="@string/registro_ir_login"
+            android:textColor="@color/enlace" />
+
+    </LinearLayout>
+
+</ScrollView>

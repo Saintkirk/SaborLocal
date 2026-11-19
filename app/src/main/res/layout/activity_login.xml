@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    ConstraintLayout: contenedor donde cada componente se ubica pegando sus bordes a otros (restricciones).
-    xmlns:android: permite usar los atributos que empiezan con android:
-    xmlns:app: permite usar los atributos que empiezan con app: (los del ConstraintLayout).
-    xmlns:tools: permite usar tools:, atributos que solo ve Android Studio.
-    id: crea el id login. Con él, Kotlin encuentra este componente.
-    layout_width: ancho igual al de su contenedor.
-    layout_height: alto igual al de su contenedor.
-    background: color de fondo, tomado de colors.xml (cambia solo en modo oscuro).
-    tools:context: este layout lo usa LoginActivity (solo sirve para la vista previa).
--->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,19 +9,6 @@
     android:background="@color/fondo_pantalla"
     tools:context=".LoginActivity">
 
-    <!--
-        ImageView: muestra una imagen.
-        id: crea el id imgLogo. Con él, Kotlin encuentra este componente.
-        layout_width: ancho fijo de 140dp (dp: medida que se ve igual en cualquier pantalla).
-        layout_height: alto fijo de 140dp.
-        layout_marginTop: espacio por fuera, arriba del componente.
-        src: la imagen del logo de la app (res/drawable).
-        scaleType: ajusta la imagen proporcionalmente dentro del contenedor.
-        contentDescription: lo que lee en voz alta el lector de pantalla (viene de strings.xml).
-        layout_constraintTop_toTopOf: su borde de arriba se pega al borde de arriba de la pantalla.
-        layout_constraintStart_toStartOf: su borde de inicio se pega al inicio de la pantalla.
-        layout_constraintEnd_toEndOf: su borde de final se pega al final de la pantalla.
-    -->
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="140dp"
@@ -45,18 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--
-        TextView: muestra un texto que la persona solo lee.
-        id: crea el id txtNombreApp.
-        layout_width: ancho justo para lo que tiene adentro.
-        layout_height: alto justo para lo que tiene adentro.
-        layout_marginTop: espacio por fuera, arriba del componente.
-        text: el nombre de la app, desde strings.xml (app_name).
-        textSize: tamaño de la letra (sp: respeta el tamaño de letra elegido por la persona).
-        textStyle: letra en negrita.
-        textColor: color del texto, desde colors.xml.
-        layout_constraintTop_toBottomOf: su borde de arriba se pega debajo de imgLogo.
-    -->
     <TextView
         android:id="@+id/txtNombreApp"
         android:layout_width="wrap_content"
@@ -70,19 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />
 
-    <!--
-        EditText: campo donde la persona escribe.
-        id: crea el id edtCorreo.
-        layout_width: ancho 0: se estira entre sus restricciones de inicio y fin.
-        layout_height: alto justo para lo que tiene adentro.
-        minHeight: altura mínima de 48dp para cumplir accesibilidad táctil de Android.
-        layout_marginTop / Start / End: espacios por fuera del componente.
-        hint: texto gris de ayuda, se borra al escribir (desde strings.xml).
-        textColorHint: color del texto de ayuda.
-        textColor: color de lo que escribe la persona.
-        inputType: teclado con @, para escribir correos.
-        layout_constraintTop_toBottomOf: se pega debajo de txtNombreApp.
-    -->
     <EditText
         android:id="@+id/edtCorreo"
         android:layout_width="0dp"
@@ -99,13 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtNombreApp" />
 
-    <!--
-        EditText: campo de contraseña.
-        id: crea el id edtClave.
-        minHeight: altura mínima de 48dp para cumplir accesibilidad táctil de Android.
-        inputType: textPassword esconde lo que se escribe con puntos (protección de datos).
-        Los demás atributos son iguales a edtCorreo; se pega debajo de edtCorreo.
-    -->
     <EditText
         android:id="@+id/edtClave"
         android:layout_width="0dp"
@@ -122,15 +66,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtCorreo" />
 
-    <!--
-        CheckBox: casilla que se marca o se desmarca.
-        id: crea el id chkRecordarme.
-        layout_marginTop: espacio por fuera, arriba.
-        text: lo que se lee al lado de la casilla (strings.xml).
-        textColor: color del texto.
-        layout_constraintTop_toBottomOf: se pega debajo de edtClave.
-        layout_constraintStart_toStartOf: su inicio se alinea con el inicio de edtClave.
-    -->
     <CheckBox
         android:id="@+id/chkRecordarme"
         android:layout_width="wrap_content"
@@ -141,16 +76,6 @@
         app:layout_constraintStart_toStartOf="@id/edtClave"
         app:layout_constraintTop_toBottomOf="@id/edtClave" />
 
-    <!--
-        Button: botón con texto.
-        id: crea el id btnIngresar.
-        style: usa el estilo propio Estilo.Boton.Principal, definido en themes.xml.
-        layout_width: ancho 0: se estira entre sus restricciones.
-        layout_marginTop: espacio por fuera, arriba.
-        text: el texto del botón (strings.xml).
-        layout_constraintTop_toBottomOf: se pega debajo de chkRecordarme.
-        layout_constraintStart_toStartOf / EndToEndOf: se alinea con edtClave.
-    -->
     <Button
         android:id="@+id/btnIngresar"
         style="@style/Estilo.Boton.Principal"
@@ -162,12 +87,6 @@
         app:layout_constraintStart_toStartOf="@id/edtClave"
         app:layout_constraintTop_toBottomOf="@id/chkRecordarme" />
 
-    <!--
-        TextView: enlace debajo del botón para ir a la pantalla de registro.
-        id: crea el id txtIrRegistro.
-        minHeight: asegura área táctil cómoda de 48dp al tocar el enlace.
-        textColor: usa el color primario (terracota) para destacarlo como enlace.
-    -->
     <TextView
         android:id="@+id/txtIrRegistro"
         android:layout_width="wrap_content"
@@ -175,6 +94,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:minHeight="48dp"
+        android:onClick="IrRegistroOnClick"
         android:text="@string/login_ir_registro"
         android:textColor="@color/primario"
         android:textStyle="bold"
