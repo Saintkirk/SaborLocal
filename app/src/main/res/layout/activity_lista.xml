@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    LinearLayout: pantalla en columna, encabezado arriba y lista desplazable abajo.
+    id: main. background: color de fondo desde colors.xml.
+    tools:context: este layout lo usa ListaActivity (solo vista previa).
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,6 +14,10 @@
     android:background="@color/fondo_pantalla"
     tools:context=".ListaActivity">
 
+    <!--
+        LinearLayout: encabezado con el título y tres botones de acción.
+        orientation: horizontal. gravity: centra en vertical.
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +25,7 @@
         android:gravity="center_vertical"
         android:padding="16dp">
 
+        <!-- TextView: título. id: txtTituloLista. Estilo propio Estilo.Titulo. -->
         <TextView
             android:id="@+id/txtTituloLista"
             style="@style/Estilo.Titulo"
@@ -23,43 +34,62 @@
             android:layout_weight="1"
             android:text="@string/lista_titulo" />
 
+        <!--
+            ImageButton: abre las recomendaciones con IA. id: btnIA.
+            app:tint: color del ícono desde colors.xml, para que se vea bien en modo claro y oscuro.
+        -->
         <ImageButton
             android:id="@+id/btnIA"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@android:drawable/star_big_on"
             android:background="@android:color/transparent"
+            app:tint="@color/texto_principal"
             android:contentDescription="@string/cd_ia" />
 
+        <!-- ImageButton: agregar una reseña. id: btnAgregar. -->
         <ImageButton
             android:id="@+id/btnAgregar"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@android:drawable/ic_input_add"
             android:background="@android:color/transparent"
+            app:tint="@color/texto_principal"
             android:contentDescription="@string/cd_agregar" />
 
+        <!-- ImageButton: cerrar sesión. id: btnSalir. -->
         <ImageButton
             android:id="@+id/btnSalir"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:background="@android:color/transparent"
+            app:tint="@color/texto_principal"
             android:contentDescription="@string/cd_salir" />
 
     </LinearLayout>
 
+    <!--
+        ScrollView: lista desplazable de reseñas.
+        layout_height: 0dp con layout_weight 1, ocupa el espacio que deja el encabezado.
+    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
+        <!-- LinearLayout: contiene las tarjetas, una bajo otra. paddingHorizontal: margen a los lados. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingHorizontal="16dp">
 
+            <!--
+                LinearLayout: tarjeta de la reseña 1 (foto, datos y botón Ver).
+                background: color de tarjeta desde colors.xml.
+                layout_marginBottom: espacio por fuera, abajo.
+            -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,12 +99,14 @@
                 android:layout_marginBottom="8dp"
                 android:background="@color/fondo_tarjeta">
 
+                <!-- ImageView: foto del restaurante, de ejemplo. -->
                 <ImageView
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:src="@mipmap/ic_launcher"
                     android:contentDescription="@string/cd_caratula" />
 
+                <!-- LinearLayout: nombre, tipo y puntaje, en columna. layout_weight: ocupa el espacio sobrante. -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -106,6 +138,7 @@
 
                 </LinearLayout>
 
+                <!-- Button: ver el detalle. id: btnVerRestaurante1. Estilo propio Estilo.Boton.Principal. -->
                 <Button
                     android:id="@+id/btnVerRestaurante1"
                     style="@style/Estilo.Boton.Principal"
@@ -115,6 +148,7 @@
 
             </LinearLayout>
 
+            <!-- LinearLayout: tarjeta de la reseña 2, misma estructura que la 1. -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -170,6 +204,7 @@
 
             </LinearLayout>
 
+            <!-- LinearLayout: tarjeta de la reseña 3, misma estructura que la 1. -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

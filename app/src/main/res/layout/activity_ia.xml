@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    LinearLayout: pantalla en columna, encabezado arriba y el contenido debajo.
+    id: main. background: color de fondo desde colors.xml.
+    tools:context: este layout lo usa IaActivity (solo vista previa).
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,6 +14,10 @@
     android:background="@color/fondo_pantalla"
     tools:context=".IaActivity">
 
+    <!--
+        LinearLayout: encabezado con título y botón volver.
+        orientation: horizontal. gravity: centra en vertical.
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +25,7 @@
         android:gravity="center_vertical"
         android:padding="16dp">
 
+        <!-- TextView: título. id: txtTituloIA. Estilo propio Estilo.Titulo. -->
         <TextView
             android:id="@+id/txtTituloIA"
             style="@style/Estilo.Titulo"
@@ -23,15 +34,24 @@
             android:layout_weight="1"
             android:text="@string/ia_titulo" />
 
+        <!--
+            ImageButton: volver a la lista. id: btnVolverIA.
+            app:tint: color del ícono desde colors.xml, para que tenga contraste en modo claro y oscuro.
+        -->
         <ImageButton
             android:id="@+id/btnVolverIA"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:background="@android:color/transparent"
+            app:tint="@color/texto_principal"
             android:contentDescription="@string/cd_volver" />
     </LinearLayout>
 
+    <!--
+        LinearLayout: contenido de la pantalla (pregunta, botón y respuesta).
+        layout_height: 0dp con layout_weight 1, ocupa el espacio que deja el encabezado.
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -40,6 +60,7 @@
         android:paddingHorizontal="16dp"
         android:paddingBottom="16dp">
 
+        <!-- TextView: pregunta al usuario. textStyle: negrita. -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,11 +69,20 @@
             android:textStyle="bold"
             android:textColor="@color/texto_principal" />
 
+        <!--
+            EditText: preferencia o antojo del usuario.
+            id: edtPreferenciaIA.
+            importantForAutofill: no, es texto libre y no hay nada que autocompletar.
+            gravity: el texto empieza arriba a la izquierda.
+            inputType: textMultiLine, la tecla Enter baja de línea.
+            minLines: muestra por lo menos 3 líneas de alto.
+        -->
         <EditText
             android:id="@+id/edtPreferenciaIA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:importantForAutofill="no"
             android:gravity="top|start"
             android:hint="@string/ia_hint"
             android:textColorHint="@color/texto_secundario"
@@ -60,6 +90,7 @@
             android:inputType="textMultiLine"
             android:minLines="3" />
 
+        <!-- Button: pide las recomendaciones. id: btnRecomendarIA. Estilo propio Estilo.Boton.Principal. -->
         <Button
             android:id="@+id/btnRecomendarIA"
             style="@style/Estilo.Boton.Principal"
@@ -68,6 +99,7 @@
             android:layout_margin="8dp"
             android:text="@string/ia_boton" />
 
+        <!-- TextView: etiqueta del área de respuesta. textStyle: negrita. -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,6 +109,10 @@
             android:textStyle="bold"
             android:textColor="@color/texto_principal" />
 
+        <!--
+            ScrollView: área de la respuesta, se desliza si el texto es largo.
+            background: color de respuesta desde colors.xml.
+        -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -85,6 +121,7 @@
             android:padding="12dp"
             android:background="@color/fondo_respuesta">
 
+            <!-- TextView: respuesta de la IA. id: txtRespuestaIA. Muestra un texto de ejemplo. -->
             <TextView
                 android:id="@+id/txtRespuestaIA"
                 android:layout_width="match_parent"

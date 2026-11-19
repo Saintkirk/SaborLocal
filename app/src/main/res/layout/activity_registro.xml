@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    ScrollView: deja deslizar el formulario cuando el teclado o la pantalla no alcanzan.
+    id: main. background: color de fondo desde colors.xml.
+    tools:context: este layout lo usa RegistroActivity (solo vista previa).
+-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -7,12 +13,32 @@
     android:background="@color/fondo_pantalla"
     tools:context=".RegistroActivity">
 
+    <!--
+        LinearLayout: el formulario, en columna.
+        padding: espacio por dentro, en los cuatro lados.
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="32dp">
 
+        <!--
+            ImageButton: volver al login. id: btnVolverRegistro.
+            layout_gravity: alineado a la derecha, igual que en Detalle.
+            app:tint: color del ícono desde colors.xml, para que tenga contraste en modo claro y oscuro.
+        -->
+        <ImageButton
+            android:id="@+id/btnVolverRegistro"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/transparent"
+            app:tint="@color/texto_principal"
+            android:contentDescription="@string/cd_volver" />
+
+        <!-- TextView: título. id: txtTituloRegistro. Estilo propio Estilo.Titulo. -->
         <TextView
             android:id="@+id/txtTituloRegistro"
             style="@style/Estilo.Titulo"
@@ -21,6 +47,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/registro_titulo" />
 
+        <!-- TextView: subtítulo. id: txtSubtituloRegistro. -->
         <TextView
             android:id="@+id/txtSubtituloRegistro"
             android:layout_width="wrap_content"
@@ -30,50 +57,68 @@
             android:textColor="@color/texto_secundario"
             android:textSize="14sp" />
 
+        <!--
+            EditText: nombre.
+            id: edtNombreRegistro.
+            autofillHints: personName.
+            inputType: textPersonName con mayúscula al inicio de cada palabra.
+        -->
         <EditText
             android:id="@+id/edtNombreRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:autofillHints="personName"
             android:hint="@string/registro_hint_nombre"
             android:inputType="textPersonName|textCapWords"
             android:minHeight="48dp"
             android:textColor="@color/texto_principal"
             android:textColorHint="@color/texto_secundario" />
 
+        <!-- EditText: correo. id: edtCorreoRegistro. autofillHints: emailAddress. -->
         <EditText
             android:id="@+id/edtCorreoRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:autofillHints="emailAddress"
             android:hint="@string/registro_hint_correo"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:textColor="@color/texto_principal"
             android:textColorHint="@color/texto_secundario" />
 
+        <!--
+            EditText: contraseña nueva.
+            id: edtClaveRegistro.
+            autofillHints: newPassword, porque se está creando una contraseña.
+        -->
         <EditText
             android:id="@+id/edtClaveRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:autofillHints="newPassword"
             android:hint="@string/registro_hint_clave"
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColor="@color/texto_principal"
             android:textColorHint="@color/texto_secundario" />
 
+        <!-- EditText: repetir contraseña. id: edtRepetirClaveRegistro. -->
         <EditText
             android:id="@+id/edtRepetirClaveRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:autofillHints="newPassword"
             android:hint="@string/registro_hint_repetir"
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColor="@color/texto_principal"
             android:textColorHint="@color/texto_secundario" />
 
+        <!-- TextView: pregunta de la comida preferida. textStyle: negrita. -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,17 +128,23 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!--
+            RadioGroup: comida preferida, solo una opción puede quedar marcada.
+            id: rgComida. orientation: horizontal.
+        -->
         <RadioGroup
             android:id="@+id/rgComida"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <!-- RadioButton: comida chilena. id: rbChilena. checked: viene marcada. -->
             <RadioButton
                 android:id="@+id/rbChilena"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
+                android:minHeight="48dp"
                 android:text="@string/comida_chilena"
                 android:textColor="@color/texto_principal" />
 
@@ -102,6 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
+                android:minHeight="48dp"
                 android:text="@string/comida_italiana"
                 android:textColor="@color/texto_principal" />
 
@@ -110,6 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
+                android:minHeight="48dp"
                 android:text="@string/comida_asiatica"
                 android:textColor="@color/texto_principal" />
 
@@ -118,18 +171,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
+                android:minHeight="48dp"
                 android:text="@string/comida_otra"
                 android:textColor="@color/texto_principal" />
         </RadioGroup>
 
+        <!-- CheckBox: aceptar términos y condiciones. id: chkTerminosRegistro. -->
         <CheckBox
             android:id="@+id/chkTerminosRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:minHeight="48dp"
             android:text="@string/registro_terminos"
             android:textColor="@color/texto_principal" />
 
+        <!-- Button: crear cuenta. id: btnCrearCuenta. Estilo propio Estilo.Boton.Principal. -->
         <Button
             android:id="@+id/btnCrearCuenta"
             style="@style/Estilo.Boton.Principal"
@@ -138,6 +195,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/registro_crear" />
 
+        <!-- TextView: enlace para volver al login. id: txtIrAlLogin. minHeight: área táctil de 48dp. -->
         <TextView
             android:id="@+id/txtIrAlLogin"
             android:layout_width="wrap_content"

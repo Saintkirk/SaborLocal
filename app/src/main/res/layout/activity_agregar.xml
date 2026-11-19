@@ -42,7 +42,10 @@
                 android:layout_weight="1"
                 android:text="@string/agregar_titulo" />
 
-            <!-- ImageButton: volver a la lista. id: btnVolverAgregar. -->
+            <!--
+                ImageButton: volver a la lista. id: btnVolverAgregar.
+                app:tint: color del ícono desde colors.xml, para que tenga contraste en modo claro y oscuro.
+            -->
             <ImageButton
                 android:id="@+id/btnVolverAgregar"
                 android:layout_width="48dp"
@@ -56,6 +59,7 @@
         <!--
             EditText: nombre del restaurante.
             id: edtNombreRestaurante.
+            autofillHints: name.
             inputType: textCapWords, mayúscula al inicio de cada palabra.
         -->
         <EditText
@@ -83,7 +87,7 @@
             android:minHeight="48dp"
             android:entries="@array/tipos_comida" />
 
-        <!-- EditText: comuna. id: edtComuna. -->
+        <!-- EditText: comuna. id: edtComuna. autofillHints: addressLocality. -->
         <EditText
             android:id="@+id/edtComuna"
             android:layout_width="match_parent"
@@ -119,7 +123,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- RadioButton: puntaje 1. id: rbPuntaje1. -->
+            <!-- RadioButton: puntaje 1. id: rbPuntaje1. minHeight: área táctil de 48dp. -->
             <RadioButton
                 android:id="@+id/rbPuntaje1"
                 android:layout_width="wrap_content"
@@ -144,6 +148,7 @@
                 android:text="@string/puntaje_3"
                 android:textColor="@color/texto_principal" />
 
+            <!-- RadioButton: puntaje 4. checked: viene marcado al abrir la pantalla. -->
             <RadioButton
                 android:id="@+id/rbPuntaje4"
                 android:layout_width="wrap_content"
@@ -165,6 +170,7 @@
         <!--
             EditText: comentario de la reseña.
             id: edtComentario.
+            importantForAutofill: no, es texto libre y no hay nada que autocompletar.
             gravity: el texto empieza arriba a la izquierda.
             inputType: textMultiLine, la tecla Enter baja de línea.
             minLines: muestra por lo menos 4 líneas de alto.
@@ -174,7 +180,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:autofillHints=""
+            android:importantForAutofill="no"
             android:gravity="top|start"
             android:hint="@string/agregar_hint_comentario"
             android:textColorHint="@color/texto_secundario"
